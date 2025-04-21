@@ -17,12 +17,23 @@ class Game:
         self.display = pygame.Surface((self.display_width, self.display_height), pygame.SRCALPHA)
         self.clock = pygame.time.Clock()
 
-        self.cx = self.display_width // 2
-        self.cy = self.display_height // 2
+        self.levels = {
 
+        }
+
+        self.assets = {
+
+        }
+
+        self.audio = {
+
+        }
+
+        self.music = {
+
+        }
+        
     def main(self):
-        self.rotation_speed_y = random.randint(-2,2) * 0.02  # radians per frame around Y-axis
-        self.rotation_speed_x = random.randint(-2,2) * 0.01 
         while True:
             mouse_pos = pygame.mouse.get_pos()
             for event in pygame.event.get():
