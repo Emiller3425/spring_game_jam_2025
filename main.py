@@ -29,10 +29,15 @@ class Game:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+                elif event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_ESCAPE:
+                        pygame.quit()
+                        sys.exit()
+            
 
             # Create a Pygame surface for the frame
             main_surface = pygame.Surface((self.display_width, self.display_height), pygame.SRCALPHA)
-            main_surface.fill((0, , 0, 255))  # Fill with black
+            main_surface.fill((0, 0, 0, 255))  # Fill with black
 
             # Scale the display to the screen size
             scaled_display = pygame.transform.scale(main_surface, (self.screen_width, self.screen_height))
