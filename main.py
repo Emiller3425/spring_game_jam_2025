@@ -10,7 +10,7 @@ import asyncio
 class Game:
     def __init__(self):
         pygame.init()
-        pygame.display.set_caption("Pygame Spring Jam")
+        pygame.display.set_caption("Penumbra path")
         self.screen_width, self.screen_height = 720, 600
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
         self.display_width, self.display_height = 240, 200
@@ -32,7 +32,7 @@ class Game:
         self.music = {
 
         }
-        
+
     def main(self):
         while True:
             mouse_pos = pygame.mouse.get_pos()
